@@ -55,7 +55,7 @@ def post_share(request, post_id):
 
             if cd.get('comments'):
                 message += f"{cd['name']}ning izohi:\n{cd['comments']}"
-            send_mail(title, message, 'saydullayevogabek616@gmail.com', [cd['to']], fail_silently=False)
+            send_mail(title, message, '', [cd['to']], fail_silently=False)
             sent = True
     else:
         form = EmailPostForm()
